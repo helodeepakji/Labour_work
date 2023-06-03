@@ -687,9 +687,8 @@
     {% include 'layout/footer.html' %}
 
 
-    <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
-    <script src="https://landkit.goodthemes.co/assets/js/vendor.bundle.js"></script>
-    <script src="https://landkit.goodthemes.co/assets/js/theme.bundle.js"></script>
-
+    <script src='{% static 'js/mapboc.js' %}'></script>
+    <script src='{% static 'js/bundle.js' %}'></script>
+    <script src='{% static 'js/theme.js' %}'></script>
   </body>
 </html>
