@@ -60,6 +60,7 @@ class RegisterAuthSerializer(serializers.ModelSerializer):
         return id
 
 class ContactSerializer(serializers.ModelSerializer):
+    Email = serializers.EmailField(required=False)
     class Meta:
         model = Contact
         fields = ('Name','Phone','Message','Email')

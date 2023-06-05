@@ -52,9 +52,9 @@ def contact(request):
         contact_serializer.is_valid(raise_exception=True)
         contact_serializer.save()
         subject = "New message from sathichal.com"
-        email_message = f"Name: {contact_serializer.data['name']}\nemail: {contact_serializer.data['Email']}\nphone: {contact_serializer.data['Phone']}\nmessage: {['Message']}" 
+        email_message = f"Name: {contact_serializer.data['Name']}\nemail: {contact_serializer.data['Email']}\nphone: {contact_serializer.data['Phone']}\nmessage: {['Message']}" 
         email_from = settings.EMAIL_HOST_USER
-        reciepent_list = ['helodeepakji@gmail.com']
+        reciepent_list = ['YOUR EMAIL']
         send_mail(subject, email_message, email_from, reciepent_list, fail_silently=False)
         return JsonResponse({'message': 'Form submitted successfully'})
     return JsonResponse({'message': 'contact page'})
