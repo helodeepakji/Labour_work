@@ -59,6 +59,12 @@ class RegisterAuthSerializer(serializers.ModelSerializer):
         id = Auth.objects.get(username=self.validated_data['username']).id
         return id
 
+class ContactSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Contact
+        fields = ('Name','Phone','Message','Email')
+
+
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
     permission_classes = (AllowAny,)
     @classmethod
