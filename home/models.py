@@ -62,4 +62,4 @@ class Contact(models.Model):
     Name = models.CharField(max_length=100)
     Phone = models.CharField(max_length=20)
     Message = models.TextField()
-    Email = models.EmailField(max_length=100,null=True,blank=True,required=False)
+    Email = models.EmailField(max_length=100,null=True,blank=True,default=None)
